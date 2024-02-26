@@ -12,7 +12,7 @@
             return CountInversion(inverseArray);
         }
 
-        public int CalculateRating(User comparable, int id, string[] userParams)
+        public int CalculateRating(User comparable, string[] userParams)
         {
             int[] inverseArray = new int[comparable.Films.Count];
 
