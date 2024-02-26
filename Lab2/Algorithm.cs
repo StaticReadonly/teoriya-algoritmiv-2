@@ -21,37 +21,6 @@
             return CountInversion(inverseArray);
         }
 
-        //Find inversions
-        public List<UserResult> FindInversions(List<User> users, int id)
-        {
-            List<UserResult> results = new List<UserResult>();
-
-            User user = users[id - 1];
-
-            //Loop through all users
-            for (int i = 0; i < users.Count; i++)
-            {
-                if (i + 1 == user.Id)
-                {
-                    continue;
-                }
-
-                User compareUser = users[i];
-
-                int inverseCount = CalculateRating(user, compareUser);
-
-                //Create result and add to array
-                UserResult userResult = new UserResult() 
-                { 
-                    Id = compareUser.Id,
-                    Rating = inverseCount
-                };
-                results.Add(userResult);
-            }
-
-            return results;
-        }
-
         //Fill inversion array
         private void FillArray(User comparable, User compared, int[] arr)
         {
