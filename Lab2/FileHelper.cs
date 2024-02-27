@@ -119,7 +119,7 @@ namespace Lab2
                         UserResult newRes = new UserResult()
                         {
                             Id = id,
-                            Rating = alg.CalculateRating(comparedUser, id, userParams)
+                            Rating = alg.CalculateRating(comparedUser, userParams)
                         };
                         AddResult(result, newRes);
                     }

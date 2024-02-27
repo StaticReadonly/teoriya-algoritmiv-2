@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2Classes", "Lab2\Lab2Classes.csproj", "{F8BA9E3E-5313-4015-8023-644C017477F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2Classes", "Lab2\Lab2Classes.csproj", "{F8BA9E3E-5313-4015-8023-644C017477F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2Tests", "Lab2Tests\Lab2Tests.csproj", "{2F6A086E-3AA1-4BE1-B3EA-F454EB2D0CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2Tests", "Lab2Tests\Lab2Tests.csproj", "{2F6A086E-3AA1-4BE1-B3EA-F454EB2D0CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2Console", "Lab2Console\Lab2Console.csproj", "{A71B56EF-30C0-424C-828F-B234E2312467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2Console", "Lab2Console\Lab2Console.csproj", "{A71B56EF-30C0-424C-828F-B234E2312467}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{9FD959CC-5483-4068-AE11-6A84FA778247}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
