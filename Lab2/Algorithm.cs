@@ -9,7 +9,8 @@
 
             FillArray(comparable, compared, inverseArray);
 
-            return CountInversion(inverseArray);
+            return CountInversion2(inverseArray);
+            //return CountInversion(inverseArray);
         }
 
         public int CalculateRating(User comparable, string[] userParams)
@@ -18,7 +19,8 @@
 
             FillArray(comparable, userParams, inverseArray);
 
-            return CountInversion(inverseArray);
+            return CountInversion2(inverseArray);
+            //return CountInversion(inverseArray);
         }
 
         //Fill inversion array
@@ -56,6 +58,68 @@
                     }
                 }
             }
+            return res;
+        }
+
+        //Count inversion O(n*logn)
+        private int CountInversion2(int[] arr)
+        {
+            int[] buf = new int[arr.Length];
+            return MergeInversion(arr, buf, 0, arr.Length - 1);
+        }
+
+        private int MergeInversion(int[] arr, int[] buf, int left, int right)
+        {
+            int res = 0;
+
+            if (right > left)
+            {
+                int m = (left + right) / 2;
+
+                res += MergeInversion(arr, buf, left, m);
+                res += MergeInversion(arr, buf, m + 1, right);
+                res += MergeInversionSort(arr, buf, left, m + 1, right);
+            }
+
+            return res;
+        }
+
+        private int MergeInversionSort(int[] arr, int[] buf, int left, int mid, int right)
+        {
+            int res = 0;
+
+            int i = left;
+            int j = mid;
+            int cur = left;
+
+            while ((i <= mid - 1) && (j <= right))
+            {
+                if (arr[i] <= arr[j])
+                {
+                    buf[cur++] = arr[i++];
+                }
+                else
+                {
+                    buf[cur++] = arr[j++];
+                    res = res + mid - i;
+                }
+            }
+
+            while(i <= mid - 1)
+            {
+                buf[cur++] = arr[i++];
+            }
+
+            while(j <= right)
+            {
+                buf[cur++] = arr[j++];
+            }
+
+            for(int k = left; k <= right; k++)
+            {
+                arr[k] = buf[k];
+            }
+
             return res;
         }
     }
