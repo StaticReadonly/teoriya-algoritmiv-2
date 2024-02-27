@@ -176,7 +176,7 @@ namespace Lab2
             {
                 foreach(var res in results[key])
                 {
-                    await writer.WriteLineAsync(res.Id + " " + res.Rating);
+                    await writer.WriteLineAsync($"{res.Id} {res.Rating}");
                 }
             }
         }

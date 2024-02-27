@@ -101,7 +101,7 @@
                 else
                 {
                     buf[cur++] = arr[j++];
-                    res = res + mid - i;
+                    res += mid - i;
                 }
             }
 
